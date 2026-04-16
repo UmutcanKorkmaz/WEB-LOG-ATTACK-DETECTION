@@ -1,0 +1,11 @@
+Rule:
+- Detect high frequency requests to sensitive endpoints
+- Time window: 2 minutes
+
+Conditions:
+- ≥4 requests to admin/sensitive paths
+- High 4xx response ratio (>70%)
+
+Severity:
+- Medium → scanning behavior
+- High → repeated sensitive endpoint probing
